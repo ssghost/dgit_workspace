@@ -9,5 +9,7 @@ contract SimpleStorage {
     bytes32 myBytes = "eth";
 
     uint storedData;
-    
+    function updateStorage(uint _storedData) public {
+        storedData = _storedData;
+    }
 }
