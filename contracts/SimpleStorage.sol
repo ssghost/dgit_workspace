@@ -8,7 +8,7 @@ contract SimpleStorage {
     address myAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
     bytes32 myBytes = "eth";
 
-    uint storedData;
+    uint public storedData;
     function updateStorage(uint _storedData) public {
         storedData = _storedData;
     }
