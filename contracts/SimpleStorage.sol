@@ -12,4 +12,7 @@ contract SimpleStorage {
     function updateStorage(uint _storedData) public {
         storedData = _storedData;
     }
+    function updateStorage_pri() private {
+        uint storedData_pri = 1024;
+    }
 }
