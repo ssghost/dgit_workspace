@@ -18,4 +18,5 @@ contract SimpleStorage {
     function retrieveStorage() public view returns(uint){
         return storedData;
     }
+    
 }
