@@ -8,6 +8,29 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "addAccount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -125,10 +148,10 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0xb2faca23fc0621be1b90fc15cd50fde04b8b729251fd43598cc5f4c2f1409666",
+			"keccak256": "0x6b74b19c90942d55580030098551778125aa1a8c365941475159ea09449a1cd5",
 			"urls": [
-				"bzz-raw://7b1c306ed49abe5af4af6f3cf6a7f22edeb0f95def7356d9b6c63d9ca9f817da",
-				"dweb:/ipfs/QmU5WEU6MZESRc5WU53Btuez4MkSJRUrdEStRXeFoj1Fyq"
+				"bzz-raw://4b31602ed84020617ef3fd1ffb171fac57b430ef225b2e6516a4b58de1e64df1",
+				"dweb:/ipfs/QmPXskrryb2s46bXBQSQod4uHwgQf5AVYL2iS5zSdd6FxE"
 			]
 		}
 	},

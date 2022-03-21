@@ -31,8 +31,6 @@ contract SimpleStorage {
     });
 
     Account[] public asset;
-    uint size = 6;
-    Account[size] public asset_fixed;
     function addAccount(string memory _name, uint _amount, address _wallet) public {
         asset.push(Account({name:_name, amount:_amount, wallet:_wallet}));
     }
