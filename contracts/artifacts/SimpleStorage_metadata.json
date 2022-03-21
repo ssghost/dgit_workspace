@@ -6,6 +6,35 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "asset",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "myaccount",
 				"outputs": [
@@ -96,10 +125,10 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x6ebb05d51272d372e8a92542f14fc1a785c39eb80897190341aadb796a9353d5",
+			"keccak256": "0xb2faca23fc0621be1b90fc15cd50fde04b8b729251fd43598cc5f4c2f1409666",
 			"urls": [
-				"bzz-raw://1fcca191d226f4fedf2c5768453df83019d03fbed79a5b19c81fcedfdad4954f",
-				"dweb:/ipfs/QmZ2s7HuggDyXx6Q4RZ9ZgsbvkpvsQZJcE6nBAFd4QF1KV"
+				"bzz-raw://7b1c306ed49abe5af4af6f3cf6a7f22edeb0f95def7356d9b6c63d9ca9f817da",
+				"dweb:/ipfs/QmU5WEU6MZESRc5WU53Btuez4MkSJRUrdEStRXeFoj1Fyq"
 			]
 		}
 	},
