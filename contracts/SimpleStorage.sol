@@ -24,7 +24,6 @@ contract SimpleStorage {
         uint amount;
         address wallet;
     }
-
     Account public myaccount = Account({
         name: "vitalik",
         amount: 100,
