@@ -19,4 +19,10 @@ contract SimpleStorage {
         return storedData;
     }
     
+    struct public Account {
+        string name;
+        uint amount;
+        address myaddress;
+    }
+
 }
