@@ -22,7 +22,7 @@ contract SimpleStorage {
     struct public Account {
         string name;
         uint amount;
-        address myaddress;
+        address wallet;
     }
 
 }
