@@ -19,7 +19,7 @@ contract SimpleStorage {
         return storedData;
     }
     
-    struct public Account {
+    struct Account {
         string name;
         uint amount;
         address wallet;
@@ -28,7 +28,7 @@ contract SimpleStorage {
     Account public myaccount = Account({
         name: "vitalik",
         amount: 100,
-        wallet: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4,
-    })
+        wallet: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+    });
 
 }

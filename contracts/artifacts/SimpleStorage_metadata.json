@@ -7,6 +7,29 @@
 		"abi": [
 			{
 				"inputs": [],
+				"name": "myaccount",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "retrieveStorage",
 				"outputs": [
 					{
@@ -73,10 +96,10 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x29b81f2c6c8e394b3262c181012e3d9f3280bab9ca4fe25f82487f1d281e51c3",
+			"keccak256": "0x6ebb05d51272d372e8a92542f14fc1a785c39eb80897190341aadb796a9353d5",
 			"urls": [
-				"bzz-raw://437af553f921f1e292b823d3743d7ff4f248556ea4c9a0ffd3ad93bbc35b5855",
-				"dweb:/ipfs/Qmd1F1EJAL18yU3PNiboqXADxa6g7uv8asa9wx1wHAgcj3"
+				"bzz-raw://1fcca191d226f4fedf2c5768453df83019d03fbed79a5b19c81fcedfdad4954f",
+				"dweb:/ipfs/QmZ2s7HuggDyXx6Q4RZ9ZgsbvkpvsQZJcE6nBAFd4QF1KV"
 			]
 		}
 	},
