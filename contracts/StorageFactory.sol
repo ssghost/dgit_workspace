@@ -9,11 +9,9 @@ contract StorageFactory{
         StorageArray.push(myStorage);
     }
     function call_update(uint _index, uint _data) public {
-        SimpleStorage myStorage = SimpleStorage(address(StorageArray[_index]));
-        myStorage.updateStorage(_data);
+        SimpleStorage(address(StorageArray[_index])).updateStorage(_data);
     }
     function call_retrieve(uint _index) public view returns(uint){
-        SimpleStorage myStorage = SimpleStorage(address(StorageArray[_index]));
-        return myStorage.retrieveStorage();
+        return SimpleStorage(address(StorageArray[_index])).retrieveStorage();
     }
 }
