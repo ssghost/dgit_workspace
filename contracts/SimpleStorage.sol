@@ -25,4 +25,10 @@ contract SimpleStorage {
         address wallet;
     }
 
+    Account public myaccount = Account({
+        name: "vitalik",
+        amount: 100,
+        wallet: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4,
+    })
+
 }
