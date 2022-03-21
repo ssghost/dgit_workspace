@@ -31,8 +31,10 @@ contract SimpleStorage {
     });
 
     Account[] public asset;
+    mapping(string => uint) public name2amount;
     function addAccount(string memory _name, uint _amount, address _wallet) public {
         asset.push(Account(_name, _amount, _wallet));
+        name2amount[_name] = _amount;
     }
 
 }
