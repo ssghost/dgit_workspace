@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract SimpleStorage {
@@ -12,7 +13,7 @@ contract SimpleStorage {
     function updateStorage(uint _storedData) public {
         storedData = _storedData;
     }
-    function updateStorage_pri() private {
+    function updateStorage_pri() private pure {
         uint storedData_pri = 1024;
     }
     function retrieveStorage() public view returns(uint){
