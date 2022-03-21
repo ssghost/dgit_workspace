@@ -32,7 +32,7 @@ contract SimpleStorage {
 
     Account[] public asset;
     function addAccount(string memory _name, uint _amount, address _wallet) public {
-        asset.push(Account({name:_name, amount:_amount, wallet:_wallet}));
+        asset.push(Account(_name, _amount, _wallet));
     }
 
 }
