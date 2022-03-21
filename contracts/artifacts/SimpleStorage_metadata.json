@@ -7,6 +7,19 @@
 		"abi": [
 			{
 				"inputs": [],
+				"name": "retrieveStorage",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "storedData",
 				"outputs": [
 					{
@@ -60,10 +73,10 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x32e55b28f379ae0feacf51a57012189526e515d8addf0cdcb3630375c06faf6d",
+			"keccak256": "0xeb6b48beec3e33ce29eb489c118f210ce6d2e0cdc8fa30033a0bb0991e0fb65e",
 			"urls": [
-				"bzz-raw://6723dbbc6f7b4a97a01a3bf775e80323ad795c2bac6ed12ac1d122ac84fed57c",
-				"dweb:/ipfs/QmUJmWBGUEfRNf9BGkhLC5ajxCp493HsEdszQtRH4KY9o3"
+				"bzz-raw://25c9b3a68adac1bd52bc1169c122d6baa06ecddbb0cabb45127fb44dcb7afdf0",
+				"dweb:/ipfs/QmUAfKkQVDcS3RU2mpDWaCZ6zAp2bbKD2Y8DQU4ozjZvMo"
 			]
 		}
 	},

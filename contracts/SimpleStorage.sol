@@ -15,4 +15,7 @@ contract SimpleStorage {
     function updateStorage_pri() private {
         uint storedData_pri = 1024;
     }
+    function retrieveStorage() public view returns(uint){
+        return storedData;
+    }
 }
