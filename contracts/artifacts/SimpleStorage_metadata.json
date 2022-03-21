@@ -81,6 +81,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "name2amount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "retrieveStorage",
 				"outputs": [
@@ -148,10 +167,10 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0xb5beb65de7fcd77bd575d6ae451c4755e46c377c0f28855841334206d86b284a",
+			"keccak256": "0xc58dc8ec74df6f7f6fa88878e591423a7b7d6ed4b0b6ca11c4494c5dc4739608",
 			"urls": [
-				"bzz-raw://ad9e808e8d04c94d9a3696352f05d54a9639be2cfbbf8d478345e11f83a1f7d7",
-				"dweb:/ipfs/QmaRdUAkr5N95USyQDcTXtD3SBhS1pLUYWax24KWD2vC5W"
+				"bzz-raw://94f670abed5718267a670816d45a7898d668ff4453648ab297a913aacf228df1",
+				"dweb:/ipfs/QmYBr6MfgVxE6WwWVG6i2qCyAWRbxjfpeN7SUbAuVeCnSC"
 			]
 		}
 	},
