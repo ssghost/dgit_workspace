@@ -21,7 +21,7 @@ contract FundMe {
         ) = priceFeed.latestRoundData();
         return price;
     }
-    function getVersion() public view returns (uint) {
+    function getVersion() public view returns (uint256) {
         return priceFeed.version();
     }
 }
