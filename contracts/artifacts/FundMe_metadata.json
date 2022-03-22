@@ -7,6 +7,24 @@
 		"abi": [
 			{
 				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getLatestPrice",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "recvFund",
 				"outputs": [],
 				"stateMutability": "payable",
@@ -40,12 +58,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/FundMe.sol": {
-			"keccak256": "0x94ab93d04086ce7b6cb26afc768600c0f0ebdcf9f129d30b6d2c3313cb1f7534",
+		"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xf2b6c9adb3552254df1445b73563cf014434ff5e78663e9b961b6c059506ceb5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://debd97d44a8ca1eb709956703adabb98e599c4d53152caa3d28fb5312b11133c",
-				"dweb:/ipfs/QmUzj7gzJqab9AzqCHy5srg7iBS1RVwfSSF8RyYN68fxun"
+				"bzz-raw://6c1f59e0c7334c22fb54288728fc32546bdc9c8133d6db0d60223e3c28f52120",
+				"dweb:/ipfs/QmeuxawUVBhMWQJXaEhhnubCTc4Jwn5wYK8gbhq6NjrpfG"
+			]
+		},
+		"contracts/FundMe.sol": {
+			"keccak256": "0x6a5f236ba19724f80b7d7f849270f4edecfada59ec4e2689a8e427b72d38a002",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e8c313bfa9644569f9c799d90ceaf321a5f304f964c9e760b62fc5a72bc3379a",
+				"dweb:/ipfs/QmUr3Wuj9e8eAnsMaWNJqiW9uQTP97Ah8LNLZhKoerPQJp"
 			]
 		}
 	},
