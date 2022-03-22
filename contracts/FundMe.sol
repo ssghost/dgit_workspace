@@ -22,8 +22,7 @@ contract FundMe {
         return priceFeed.version();
     }
     function getUSDRate(uint _ethAmount) public view returns (uint) {
-        return uint((getLatestPrice()*_ethAmount)/(10**8)); 
+        return uint((uint(getLatestPrice())*_ethAmount)/(10**8)); 
     }
-
 
 }
