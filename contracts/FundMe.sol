@@ -9,6 +9,9 @@ contract FundMe {
         require(getUSDRate(msg.value)>= minUSD);
         address2amount[msg.sender] += msg.value;
     }
+    function witdFund() public payable {
+        payable(msg.sender).transfer(address(this).balance);
+    }
 
     AggregatorV3Interface internal priceFeed;
     constructor() {

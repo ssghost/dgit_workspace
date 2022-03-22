@@ -61,6 +61,13 @@
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "witdFund",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -99,11 +106,11 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0x8763f7ca97efb887da5dbed2357b6dec5f7902bb4a656c2b8b2ee31d40405339",
+			"keccak256": "0xe43932774959f83b454e87e7e90cd3498fe517763a5f8aa469842ff8ea969502",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://110bf03c05b477c4f6467546de9fcdbb8407010abd937a21baf1bc6a135e30a7",
-				"dweb:/ipfs/QmToy2hgHvWe2mfSTFAjViR6prXejFM2St4nwCC7cHD6Kn"
+				"bzz-raw://e376f5c6df512b0bfa746105433bc909a7fe0f873f6e027832073e943abd5218",
+				"dweb:/ipfs/QmXYxqvqdCvHNjb3dGMrgRA2R7FTiyWXDuwvKxnTBEMMTn"
 			]
 		}
 	},
