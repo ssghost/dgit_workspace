@@ -5,6 +5,8 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 contract FundMe {
     mapping (address => uint) address2amount;
     function recvFund() public payable {
+        uint minUSD = 5*10**8;
+        require(getUSDRate(msg.value)>= minUSD);
         address2amount[msg.sender] += msg.value;
     }
 
@@ -22,4 +24,6 @@ contract FundMe {
     function getUSDRate(uint _ethAmount) public view returns (uint) {
         return uint((getLatestPrice()*_ethAmount)/(10**8)); 
     }
+
+
 }
