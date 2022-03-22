@@ -19,4 +19,7 @@ contract FundMe {
     function getVersion() public view returns (uint256) {
         return priceFeed.version();
     }
+    function getUSDRate(uint _ethAmount) public view returns (uint) {
+        return uint((getLatestPrice()*_ethAmount)/(10**8)); 
+    }
 }
