@@ -25,6 +25,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "recvFund",
 				"outputs": [],
 				"stateMutability": "payable",
@@ -67,11 +80,11 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0x6a5f236ba19724f80b7d7f849270f4edecfada59ec4e2689a8e427b72d38a002",
+			"keccak256": "0xf368f3e17c9ed7f349f46ec4566456a8beb14b0e538d36cb27e562c2eee6d935",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e8c313bfa9644569f9c799d90ceaf321a5f304f964c9e760b62fc5a72bc3379a",
-				"dweb:/ipfs/QmUr3Wuj9e8eAnsMaWNJqiW9uQTP97Ah8LNLZhKoerPQJp"
+				"bzz-raw://60ab5587e4b51b0f617b2b9f645833a3af7ff5c0e9b0125eb2244c6fb7fbb114",
+				"dweb:/ipfs/QmZhiA7DzC4NJovginF4TtP6ML1CLe1omspxDweGf3Wzn2"
 			]
 		}
 	},
