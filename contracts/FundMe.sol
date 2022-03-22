@@ -4,16 +4,22 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 contract FundMe {
     mapping (address => uint) address2amount;
+    address[] public funders;
     function recvFund() public payable {
         uint minUSD = 5*10**8;
         require(getUSDRate(msg.value)>= minUSD);
         address2amount[msg.sender] += msg.value;
+        funders.push(msg.sender);
     }
 
     address public owner = msg.sender;
     modifier ownerChecker {require(owner == msg.sender); _;}
     function witdFund() public payable ownerChecker {
         payable(msg.sender).transfer(address(this).balance);
+        for (uint i=0; i<funders.length; i++) {
+            address2amount[funders[i]] = 0;
+        }
+        funders = new address[](0);
     }
 
     AggregatorV3Interface internal priceFeed;
