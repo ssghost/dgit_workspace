@@ -9,7 +9,10 @@ contract FundMe {
         require(getUSDRate(msg.value)>= minUSD);
         address2amount[msg.sender] += msg.value;
     }
-    function witdFund() public payable {
+
+    address public owner = msg.sender;
+    modifier ownerChecker {require(owner == msg.sender); _;}
+    function witdFund() public payable ownerChecker {
         payable(msg.sender).transfer(address(this).balance);
     }
 
