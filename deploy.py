@@ -12,3 +12,6 @@ compiled_file = compile_standard({
 
 with open("compiled.json",'w') as f:
     json.dump(compiled_file, f)
+
+bytecode= compiled_file["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["evm"]["bytecode"]["object"]
+abi= compiled_file["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["abi"]
