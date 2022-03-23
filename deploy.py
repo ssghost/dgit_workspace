@@ -1,6 +1,8 @@
 from solc import compile_standard
 from web3 import Web3
 import json
+import os
+import dotenv
 
 with open("./contracts/SimpleStorage.sol",'r') as f:
     file = f.read()
@@ -18,8 +20,17 @@ bytecode = compiled_file["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["evm
 abi = compiled_file["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["abi"]
 
 myweb3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
-chain_id = 5777
+chain_id = 1337
 myaddress = "0xC14605A85b76092B3D0b8B6c1Acc46F1F4029C17"
-pri_key = "fe041f36a5e19a764788eecc7f071cbea3a89f650e961810a07ea4a4222477f9"
+dotenv.load_dotenv()
+pri_key = os.getenv('PRI_KEY')
 
-myContract = Web3.eth.contract(bytecode=bytecode, abi=abi)
+myContract = myweb3.eth.contract(bytecode=bytecode, abi=abi)
+nonce = myweb3.eth.getTransactionCount(myaddress)
+transaction = myContract.constructor().buildTransaction(
+    {'chainId':chain_id, "gasPrice": myweb3.eth.gas_price, 'from':myaddress, 'nonce':nonce}
+)
+signed_Txn = myweb3.eth.account.sign_transaction(transaction, private_key=pri_key)
+Txn_hash = myweb3.eth.send_raw_transaction(signed_Txn.rawTransaction)
+Txn_receipt = myweb3.eth.wait_for_transaction_receipt(Txn_hash)
+
