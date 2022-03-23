@@ -28,9 +28,10 @@ pri_key = os.getenv('PRI_KEY')
 myContract = myweb3.eth.contract(bytecode=bytecode, abi=abi)
 nonce = myweb3.eth.getTransactionCount(myaddress)
 transaction = myContract.constructor().buildTransaction(
-    {'chainId':chain_id, "gasPrice": myweb3.eth.gas_price, 'from':myaddress, 'nonce':nonce}
+    {'chainId':chain_id, 'gasPrice': myweb3.eth.gas_price, 'from':myaddress, 'nonce':nonce}
 )
 signed_Txn = myweb3.eth.account.sign_transaction(transaction, private_key=pri_key)
 Txn_hash = myweb3.eth.send_raw_transaction(signed_Txn.rawTransaction)
 Txn_receipt = myweb3.eth.wait_for_transaction_receipt(Txn_hash)
 
+depdContract = myweb3.eth.contract(address=Txn_receipt.contractAddress, abi=abi)
