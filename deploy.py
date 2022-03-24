@@ -38,7 +38,7 @@ depdContract = myweb3.eth.contract(address=Txn_receipt.contractAddress, abi=abi)
 print(depdContract.functions.retrieveStorage().call())
 
 store_Txn = depdContract.functions.updateStorage(42).buildTransaction(
-    {'chainId':chain_id, 'gasPrice': myweb3.eth.gas_price, 'from':myaddress, 'nonce':nonce}
+    {'chainId':chain_id, 'gasPrice': myweb3.eth.gas_price, 'from':myaddress, 'nonce':nonce+1}
 )
 signed_store_Txn = myweb3.eth.account.sign_transaction(store_Txn, private_key=pri_key)
 st_Txn_hash = myweb3.eth.send_raw_transaction(signed_store_Txn.rawTransaction) 
