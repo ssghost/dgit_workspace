@@ -1,0 +1,3 @@
+dotenv: .env
+wallets:
+  from_key: ${PRI_KEY}
