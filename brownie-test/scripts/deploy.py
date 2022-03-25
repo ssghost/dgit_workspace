@@ -10,7 +10,7 @@ def deploy_c1():
 
 def deploy_c3():
     account = get_account()
-    priceFeed = deploy_mock()
+    priceFeed = deploy_mock(account)
     dContract3 = FundMe.deploy(priceFeed, {'from': account}, publish_source=config['networks'][network.show_active()].get('verify'))
     print(dContract3.address)
 
@@ -20,7 +20,7 @@ def get_account():
     else:
         return accounts.add(config['wallets']['from_key']) 
 
-def deploy_mock():
+def deploy_mock(account):
     if network.show_active() != 'development':
         return config['networks'][network.show_active()]['price_feed']
     else:
