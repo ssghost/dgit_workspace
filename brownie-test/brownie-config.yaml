@@ -7,3 +7,10 @@ compiler:
   solc:
     remappings:
       - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.2.0'
+networks:
+  kovan:
+    price_feed: "0x9326BFA02ADD2366b30bacB125260Af641031331"
+    verify: True
+  development:
+    verify: False
+  
