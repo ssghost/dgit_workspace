@@ -1,13 +1,8 @@
-from brownie import accounts, SimpleStorage
+from scripts.deploy import get_account, deploy_c1
 
-def test_deploy():
-    account = accounts[0]
-    c1 = SimpleStorage.deploy({'from': account})
-    assert c1.retrieveStorage() == 0
-
-def test_update():
-    account = accounts[0]
-    c1 = SimpleStorage.deploy({'from': account})
+def test_c1():
+    account = get_account()
+    c1 = deploy_c1()
     c1.updateStorage(42, {'from': account}) 
     assert c1.retrieveStorage() == 42
 

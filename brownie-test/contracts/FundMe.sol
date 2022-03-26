@@ -3,7 +3,7 @@ pragma solidity ^0.8.7;
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 contract FundMe {
-    mapping (address => uint) address2amount;
+    mapping (address => uint) public address2amount;
     address[] public funders;
     function recvFund() public payable {
         uint minUSD = 5*10**8;

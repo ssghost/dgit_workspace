@@ -7,12 +7,14 @@ def deploy_c1():
     Txn1 = dContract1.updateStorage(42, {'from':account})
     Txn1.wait(1)
     print(dContract1.retrieveStorage())
+    return dContract1
 
 def deploy_c3():
     account = get_account()
     priceFeed = deploy_mock(account)
     dContract3 = FundMe.deploy(priceFeed, {'from': account}, publish_source=config['networks'][network.show_active()].get('verify'))
     print(dContract3.address)
+    return dContract3
 
 def get_account():
     if network.show_active() in ['development', 'ganache-local']:
