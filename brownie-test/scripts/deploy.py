@@ -28,7 +28,7 @@ def deploy_mock(account):
             MockV3Aggregator.deploy(18, 2*10**18, {'from': account})
         return MockV3Aggregator[-1].address
 
-if __name__=='__main__':
+def main():
     deploy_c1()
     deploy_c3()
     

@@ -36,5 +36,10 @@ contract FundMe {
     function getUSDRate(uint _ethAmount) public view returns (uint) {
         return uint((uint(getLatestPrice())*_ethAmount)/(10**8)); 
     }
-
+    function getEntranceFee() public view returns (uint256) {
+        uint256 minimumUSD = 50 * 10**18;
+        uint256 price = uint(getLatestPrice());
+        uint256 precision = 1 * 10**18;
+        return ((minimumUSD * precision) / price) + 1;
+    }
 }
