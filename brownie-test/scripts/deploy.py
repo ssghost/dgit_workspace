@@ -1,4 +1,4 @@
-from brownie import accounts, config, network, SimpleStorage, FundMe, MockV3Aggragator
+from brownie import accounts, config, network, SimpleStorage, FundMe, MockV3Aggregator
 
 def deploy_c1():
     account = get_account()
@@ -15,19 +15,20 @@ def deploy_c3():
     print(dContract3.address)
 
 def get_account():
-    if network.show_active() == 'development':
+    if network.show_active() in ['development', 'ganache-local']:
         return accounts[0]
     else:
         return accounts.add(config['wallets']['from_key']) 
 
 def deploy_mock(account):
-    if network.show_active() != 'development':
+    if network.show_active() not in ['development', 'ganache-local']:
         return config['networks'][network.show_active()]['price_feed']
     else:
-        if len(MockV3Aggragator) <= 0:
-            MockV3Aggragator.deploy(18, 2*10**18, {'from': account})
-        return MockV3Aggragator[-1].address
+        if len(MockV3Aggregator) <= 0:
+            MockV3Aggregator.deploy(18, 2*10**18, {'from': account})
+        return MockV3Aggregator[-1].address
 
 if __name__=='__main__':
     deploy_c1()
     deploy_c3()
+    
